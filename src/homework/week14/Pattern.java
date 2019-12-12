@@ -1,4 +1,4 @@
-package homework;
+package homework.week14;
 import java.util.ArrayList;
 
 public class Pattern{

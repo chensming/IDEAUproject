@@ -13,7 +13,7 @@ public class Calculator {
     String result = "";// 结果
 
     // 状态开关
-    int k1 = 1;// 开关1 用于选择输入方向 将要写入str2或 str2
+    int k1 = 1;// 开关1 用于选择输入方向 将要写入str1或 str2
     int k2 = 1;// 开关2 符号键 次数 k2>1说明进行的是2+3-9+8 这样的多符号运算
     int k3 = 1;// 开关3 str1 是否可以被清0 ==1时可以 !=1时不能被清0
     int k4 = 1;// 开关4 str2 同上

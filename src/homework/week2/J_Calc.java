@@ -6,16 +6,16 @@ public class J_Calc{
     public static void main(String args[]){
         double result = 0;
         Scanner in = new Scanner(System.in);
-        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½Õ¸ï¿½ [%]),ï¿½Ø³ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        System.out.println("ÇëÊäÈëÒ»¸öÊý×Ö (¿Õ¸ñ [%]),»Ø³µ»ò¿Õ¸ñÔÚÊäÈëÔËËã·û");
         double numA = in.nextDouble() * 1000;
         char operaA = in.next().charAt(0);
-        
+
         /*
-            flagÎª0ï¿½ï¿½ï¿½ï¿½+
-            flagÎª1ï¿½ï¿½ï¿½ï¿½-
-            flagÎª2ï¿½ï¿½ï¿½ï¿½*
-            flagÎª3ï¿½ï¿½ï¿½ï¿½/
-        
+            flagÎª0´ú±í+
+            flagÎª1´ú±í-
+            flagÎª2´ú±í*
+            flagÎª3´ú±í/
+
         */
         int flag = -1;
         switch(operaA){
@@ -33,7 +33,7 @@ public class J_Calc{
                 break;
             case '%':
                 numA =  numA/100;
-                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+                System.out.println("ÇëÊäÈëÒ»¸öÔËËã·û");
                 char operaB = in.next().charAt(0);
                 switch(operaB){
                     case '+':
@@ -47,20 +47,20 @@ public class J_Calc{
                         break;
                     case '/':
                         flag = 3;
-                        break; 
+                        break;
                 }
                 break;
             default:
-                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+                System.out.println("ÊäÈëÓÐÎó");
         }
         // System.out.println("flag: "+flag);
 
-        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½");
+        System.out.println("ÇëÊäÈëµÚ¶þ¸öÊý");
         double numB = in.nextDouble() * 1000;
 
-        //ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½%
+        //¼ì²éÊÇ·ñ»¹ÓÐ%
         if ( in.hasNext("%") )
-			numB = numB / 100;
+            numB = numB / 100;
         switch(flag){
             case 0:
                 result = (numA + numB) / 1000;
@@ -77,7 +77,7 @@ public class J_Calc{
             default:
                 System.out.println("*** error! ***");
         }
-        
+
         System.out.println("result: "+result);
     }
 }
